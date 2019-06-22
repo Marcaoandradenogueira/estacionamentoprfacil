@@ -1,0 +1,7 @@
+<h2>Tem certeza que quer deletar: {{ mensalista }} </h2>
+
+<form method="POST" action="{% url 'core_mensalista_delete' mensalista.id %}">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+
+</form>
