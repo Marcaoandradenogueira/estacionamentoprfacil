@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['localhost', 'estacionamentoprfacil.herokuapp.com']
 
 INSTALLED_APPS = [
     'core',
+    'bootstrapform',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

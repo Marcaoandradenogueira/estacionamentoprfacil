@@ -17,7 +17,7 @@ from .forms import (
 
 
 def home(request):
-    context = {'mensagem':'Ola Dengo'}
+    context = {'mensagem':'Ola Mundo'}
     return render(request, 'core/index.html', context)
 
 

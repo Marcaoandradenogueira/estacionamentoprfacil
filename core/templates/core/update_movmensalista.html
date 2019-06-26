@@ -1,12 +1,29 @@
-<h2> Update Mov Mensalista: {{movmensalistas}} </h2>
+{% extends "base.html" %}
+{% load bootstrap %}
+
+{% block main %}
 
 
-<form action="% url 'core_movmensalistas_update' movmensalistas.id %}" method="POST">
-        {% csrf_token %}
+<div class="row">
+    <div class="col-12">
+        <h2> Update Mov Mensalista: {{movmensalistas}} </h2>
+    <div>
+</div>
 
-        {{ form.as_p }}
 
-        <button type="submit"> Cadastrar </button>
-</form>
+<div class="row">
+    <div class="col-12">
+        <form action="{% url 'core_movmensalistas_update' movmensalistas.id %}" method="POST">
+                {% csrf_token %}
 
-<a href="{% url 'core_movmensalistas_delete' movmensalistas.id %}">Delete</a>
+                {{ form |bootstrap }}
+
+                <button type="submit" class="btn btn-primary"> Cadastrar </button>
+                <a href="{% url 'core_movmensalistas_delete' movmensalistas.id %}" class="btn btn-danger">Delete</a>
+        </form>
+
+
+    <div>
+</div>
+
+{% endblock %}
